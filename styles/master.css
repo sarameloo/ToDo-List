@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+button,
+optgroup,
+select,
+textarea,
+pre {
+    margin: 0;
+}
+
+td,
+legend,
+textarea,
+input,
+fieldset {
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+  line-height: 1.2;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+

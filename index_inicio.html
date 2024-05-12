@@ -4,17 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
+    
+    <link rel="stylesheet" href="./styles/master.css" />
     <link rel="stylesheet" href="/styles/style_inicio.css" />
+
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="/img/Logo.svg" />
-      </div>
-      <div class="modo-e-usuario">
-        <img src="/img/Vector.svg" />
-        <img src="/img/Profile.svg" />
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="/img/Logo.svg" />
+        </div>
+        <ul class="nav">
+          <li><a href=""><img src="/img/Vector.svg" /></a></li>
+          <li><a href=""><img src="/img/Profile.svg" /></a></li>
+        </ul>
       </div>
     </header>
+
+    <main class="main">
+      <a href="" id="add-button" >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" width="2" height="14" fill="#DC4C3E"/>
+          <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#DC4C3E"/>
+          </svg>
+        Adicionar Tarefa
+      </a>
+
+      <div class="form hide">
+        <form action="">
+            <div class="inputs">
+              <input type="text" id="title" name="title" placeholder="Nome da tarefa" autocomplete="off" required/>
+              <input type="text" id="description" name="description" placeholder="Descrição" autocomplete="off"/>
+            
+            <div class="input-group">
+              <input type="date" name="date" id="date" placeholder="Data de vencimento">
+              <select name="priority" id="priority" required>
+                <option selected disabled value="" >
+                  Prioridade
+                  <img src="./img/Flat.svg" alt="">
+                </option>
+                <option value="">Baixa</option>
+                <option value="">Média</option>
+                <option value="">Alta</option>
+              </select>
+            </div>
+            </div>
+            <div class="actions">
+              <button id="cancel">Cancelar</button>
+              <button type="submit">Adicionar tarefa</button>
+            </div>
+        </form>
+      </div>
+
+      <div class="container-tasks">
+        <div class="head">
+          <p>Tarefas Criadas <span>0</span></p>
+          <p>Concluídas <span>0</span></p>
+        </div>
+        <div class="tasks"></div>
+      </div>
+    </main>
+
+    <script src="./js/task-form.js"></script>
   </body>
 </html>
