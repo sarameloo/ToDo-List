@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="styles/master.css" />
     <link rel="stylesheet" href="styles/style_inicio.css" />
-    <script src="js/envia-task.js"></script>
   </head>
   <body>
     <header class="header">
@@ -49,12 +48,7 @@
       </a>
 
       <div class="form hide">
-        <form
-          id="myForm"
-          name="myForm"
-          action="php/cadastrar-task.php"
-          method="post"
-        >
+        <form id="myForm">
           <div class="inputs">
             <input
               type="text"
@@ -84,18 +78,18 @@
                   Prioridade
                   <img src="./img/Flat.svg" alt="" />
                 </option>
-                <option value="">Baixa</option>
-                <option value="">Média</option>
-                <option value="">Alta</option>
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
               </select>
               <select name="complexity" id="complexity" required>
                 <option selected disabled value="">
                   Complexidade
                   <img src="./img/brain.svg" alt="" />
                 </option>
-                <option value="">Baixa</option>
-                <option value="">Média</option>
-                <option value="">Alta</option>
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
               </select>
             </div>
           </div>
@@ -114,7 +108,7 @@
         <div class="tasks"></div>
       </div>
     </main>
-
-    <script src="./js/task-form.js"></script>
+    <script src="js/envia-task.js"></script>
+    <script src="js/task-form.js"></script>
   </body>
 </html>
