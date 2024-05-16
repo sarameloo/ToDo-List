@@ -1,0 +1,22 @@
+.card > input:focus {
+  outline: none;
+  transform: scale(1.02);
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+.btn:focus {
+  background-color: #5e60ce;
+  transform: scale(0.96);
+  transition: 0.05s;
+}
+
+.cadastro_page > a:hover {
+  color: #5e60ce;
+}
+
+.mode > img:hover {
+  transform: scale(1.02);
+}
