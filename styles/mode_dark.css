@@ -1,22 +1,46 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-body {
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  transition: background 0.2s linear;
-}
+@import url(inicio.css);
 
 body.dark {
-  background: #292c35;
+  background: var(--color-dark-body);
 }
+
+header.dark-header {
+  background-color: var(--color-dark-header);
+  border-bottom: 1.5px solid var(--color-dark-header-border);
+}
+
+.label.dark-label {
+  background-color: var(--color-purple);
+}
+
+.label .ball.dark-ball {
+  background-color: #302F36;;
+}
+
+.form.dark-form {
+  border: 1.5px solid var(--color-gray-70);
+}
+
+.form #title.dark-input, .form #description.dark-input, 
+.form input[type="date"].dark-input, select#priority.dark-input,
+select#complexity.dark-input {
+  color: var(--color-gray-30);
+  color-scheme: dark;
+}
+
+select#priority.dark-select,
+select#complexity.dark-select {
+  
+}
+
+.form input[type="text"].dark-placeholder::placeholder  {
+  color: var(--color-gray-30);
+}
+
+.actions.dark-actions {
+  border-top: 1px solid var(--color-gray-70);
+}
+
 
 .checkbox {
   opacity: 0;
@@ -24,7 +48,7 @@ body.dark {
 }
 
 .label {
-  background-color: #111;
+  background-color: var(--color-blue);
   border-radius: 50px;
   cursor: pointer;
   display: flex;
@@ -33,9 +57,11 @@ body.dark {
 
   padding: 5px;
   position: relative;
-  height: 26px;
+  height: 23px;
   width: 50px;
   transform: scale(1.5);
+  transition: background 0.2s linear;
+
 }
 
 .label .ball {
@@ -43,21 +69,24 @@ body.dark {
   border-radius: 50%;
   position: absolute;
   top: 2px;
-  left: 2px;
-  height: 22px;
-  width: 22px;
-  transform: translateX(0px);
+  left: 1px;
+  height: 19px;
+  width: 19px;
+  transform: translateX(2px);
   transition: transform 0.2s linear;
 }
 
 .checkbox:checked + .label .ball {
-  transform: translateX(24px);
+  transform: translateX(27px);
 }
 
 .fa-moon {
-  color: var(--color-blue);
+  color: #302F36;
+  transition: background 0.2s linear;
 }
 
 .fa-sun {
-  color: var(--color-blue);
+  color: var(--color-white-01);
+  transition: background 0.2s linear;
+
 }

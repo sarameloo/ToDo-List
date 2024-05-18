@@ -23,6 +23,11 @@
   --font-size-14: 0.875rem;
   --font-size-13: 0.8125rem;
   --font-size-12: 0.75rem;
+
+  /* Dark Mode */
+  --color-dark-body: #222126;
+  --color-dark-header: rgba(60, 60, 68, 0.5333);
+  --color-dark-header-border: rgba(60, 60, 68, 0.46);
 }
 
 body {
@@ -44,12 +49,14 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header {
   padding: 4rem 0;
   background-color: var(--color-white-40);
   border-bottom: 1.5px solid var(--color-white-40);
+  transition: background 0.2s linear;
 }
 
 .logo {
@@ -58,10 +65,16 @@ body {
 
 .nav {
   display: flex;
+  align-items: center;
 }
 
 .nav li:first-child {
   margin-right: 2rem;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
 }
 
 .main {
@@ -125,6 +138,7 @@ body {
   padding: 0.875rem 0;
   outline: none;
   font-family: var(--font-mono);
+  background: transparent;
 }
 
 .form #title {
@@ -146,6 +160,7 @@ body {
   border-radius: 5px;
   padding: 7px;
   font-family: var(--font-mono);
+  background-color: transparent;
 }
 
 .inputs {
@@ -154,7 +169,7 @@ body {
   flex-direction: column;
 }
 
-select {
+select#priority {
   margin-left: 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -174,6 +189,27 @@ select {
   font-family: var(--font-mono);
   width: 8rem;
 }
+
+select#complexity {
+  margin-left: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  border: none;
+  outline: none;
+  border: 1px solid var(--color-gray-30);
+  color: var(--color-gray-70);
+  border-radius: 5px;
+  padding: 8px 20px 8px 10px;
+  background-color: transparent;
+  background-image: url("../img/Complexity.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 10px;
+  font-family: var(--font-mono);
+  width: 9rem;
+} 
 
 .input-group {
   margin-top: 1rem;
