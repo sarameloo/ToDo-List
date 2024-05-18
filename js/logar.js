@@ -4,7 +4,7 @@ meu_form.addEventListener("submit", (event) => {
   event.preventDefault();
   let form_data = new FormData(meu_form);
 
-  fetch("logar.php", {
+  fetch("php/logar.php", {
     method: "POST",
     body: form_data,
   })
@@ -19,7 +19,7 @@ meu_form.addEventListener("submit", (event) => {
         console.log(data);
       } else {
         window.location.href =
-          "http://localhost/quick_task_v2/login/teste_login.php";
+          "http://localhost/dashboard/tarefas/php/teste_login.php";
       }
     })
     .catch((error) => {
