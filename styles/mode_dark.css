@@ -14,33 +14,71 @@ header.dark-header {
 }
 
 .label .ball.dark-ball {
-  background-color: #302F36;;
+  background-color: #302f36;
 }
 
 .form.dark-form {
   border: 1.5px solid var(--color-gray-70);
 }
 
-.form #title.dark-input, .form #description.dark-input, 
-.form input[type="date"].dark-input, select#priority.dark-input,
+.form #title.dark-input,
+.form #description.dark-input,
+.form input[type="date"].dark-input,
+select#priority.dark-input,
 select#complexity.dark-input {
   color: var(--color-gray-30);
   color-scheme: dark;
 }
 
-select#priority.dark-select,
-select#complexity.dark-select {
-  
+select#priority.dark-select {
+  margin-left: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  border: none;
+  outline: none;
+  border: 1px solid var(--color-gray-30);
+  color: var(--color-gray-70);
+  border-radius: 5px;
+  padding: 8px 20px 8px 10px;
+  background-color: transparent;
+  background-image: url("../img/flatDark.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 10px;
+  font-family: var(--font-mono);
+  width: 8rem;
 }
 
-.form input[type="text"].dark-placeholder::placeholder  {
+select#complexity.dark-select {
+  margin-left: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  border: none;
+  outline: none;
+  border: 1px solid var(--color-gray-30);
+  color: var(--color-gray-70);
+  border-radius: 5px;
+  padding: 8px 20px 8px 10px;
+  background-color: transparent;
+  background-image: url("../img/complexityDark.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 10px;
+  font-family: var(--font-mono);
+  width: 9rem;
+}
+
+.form input[type="text"].dark-placeholder::placeholder {
   color: var(--color-gray-30);
 }
 
 .actions.dark-actions {
   border-top: 1px solid var(--color-gray-70);
 }
-
 
 .checkbox {
   opacity: 0;
@@ -61,7 +99,6 @@ select#complexity.dark-select {
   width: 50px;
   transform: scale(1.5);
   transition: background 0.2s linear;
-
 }
 
 .label .ball {
@@ -81,12 +118,11 @@ select#complexity.dark-select {
 }
 
 .fa-moon {
-  color: #302F36;
+  color: #302f36;
   transition: background 0.2s linear;
 }
 
 .fa-sun {
   color: var(--color-white-01);
   transition: background 0.2s linear;
-
 }
