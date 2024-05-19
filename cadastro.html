@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/anima_login.css">
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <div class="titulo">
+    <img class="logo" src="img/logo.svg" alt="fogueteMuitoLouco" />
+    <h1 class="t-1">Quick</h1>
+    <h1 class="t-2">Task</h1>
+  </div>
+  <form class="card">
+    <h2>Cadastro</h2>
+    <input type="text" name="nome" placeholder="Nome" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="password" name="senha" placeholder="Senha" required />
+    <button type="submit" class="botao">Cadastrar</button>
+  </form>
+  <div class="cadastro_page">
+    <p>Já possui uma conta?</p>
+    <a href="http://localhost/dashboard/tarefas/login.html">Faça login.</a>
+  </div>
+  <div class="mode">
+    <img src="img/dark.svg" data-src="img/dark.svg" data-set="false" alt="lua_dark_mode" />
+  </div>
+  <script src="js/envia-cadastro.js"></script>
+</body>
+
+</html>
