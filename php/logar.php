@@ -3,11 +3,13 @@
 include 'conexao.php';
 session_start();
 
-$email = $_POST["email"];
+$nome = $_POST["email"];
 $senha = $_POST["senha"];
 
 $conferir_email = "select email from usuario where email = '$email'";
 $conferir_senha = "select senha from usuario where senha = '$senha'";
+
+echo $conferir_email
 
 $result_email = $conn->query($conferir_email);
 $result_senha = $conn->query($conferir_senha);

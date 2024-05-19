@@ -6,18 +6,21 @@ meuForm.addEventListener("submit", (event) =>{
 
   fetch("php/cadastrar-usuario.php",{
     method: "POST",
-    body: form_data,
+    body: form_data
   })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Falha na requisição");
+      }
+      else {
+        window.location.href = "http://localhost/dashboard/ToDo-List/login.html"
       }
       return response.text();
     })
     .then((data) => {
       if (data.length > 0) {
         setTimeout(() => {
-          myForm.reset();
+          meuForm.reset();
         }, 2000);
         alert(data);
       }
