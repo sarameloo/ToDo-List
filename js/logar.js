@@ -19,7 +19,7 @@ meu_form.addEventListener("submit", (event) => {
         console.log(data);
       } else {
         window.location.href =
-          "http://localhost/dashboard/tarefas/php/teste_login.php";
+          "http://localhost/dashboard/tarefas/inicio.html";
       }
     })
     .catch((error) => {

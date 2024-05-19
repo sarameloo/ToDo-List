@@ -1,123 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
 
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <img src="img/Logocompleta.svg" />
-        </div>
-        <ul class="nav">
-          <li>
-            <div>
-              <input type="checkbox" class="checkbox" id="chk" />
-              <label class="label" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-              </label>
-            </div>
-          </li>
-          <li>
-            <a href=""><img src="./img/Profile.svg" id="profile-img"/></a>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link rel="stylesheet" href="styles/inicio.css">
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/Logocompleta.svg" />
       </div>
-    </header>
-
-    <main class="main">
-      <a href="" id="add-button">
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 14 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="6" width="2" height="14" fill="#DC4C3E" />
-          <rect
-            x="14"
-            y="6"
-            width="2"
-            height="14"
-            transform="rotate(90 14 6)"
-            fill="#DC4C3E"
-          />
-        </svg>
-        Adicionar Tarefa
-      </a>
-
-      <div class="form hide">
-        <form id="myForm">
-          <div class="inputs">
-            <input
-              type="text"
-              id="title"
-              name="title"
-              placeholder="Nome da tarefa"
-              autocomplete="off"
-              required
-            />
-            <input
-              type="text"
-              id="description"
-              name="description"
-              placeholder="Descrição"
-              autocomplete="off"
-            />
-
-            <div class="input-group">
-              <input
-                type="date"
-                name="date"
-                id="date"
-                placeholder="Data de vencimento"
-              />
-              <select name="priority" id="priority" required>
-                <option selected disabled value="">
-                  Prioridade
-                </option>
-                <option value="baixa">Baixa</option>
-                <option value="media">Média</option>
-                <option value="alta">Alta</option>
-              </select>
-              <select name="complexity" id="complexity" required>
-                <option selected disabled value="">
-                  Complexidade
-                </option>
-                <option value="baixa">Baixa</option>
-                <option value="media">Média</option>
-                <option value="alta">Alta</option>
-              </select>
-            </div>
+      <ul class="nav">
+        <li>
+          <div>
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
           </div>
-          <div class="actions">
-            <button id="cancel">Cancelar</button>
-            <button type="submit" name="submit">Adicionar tarefa</button>
-          </div>
-        </form>
-      </div>
+        </li>
+        <li>
+          <a href=""><img src="./img/Profile.svg" id="profile-img" /></a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
-      <div class="container-tasks">
-        <div class="head">
-          <p>Tarefas Criadas <span>0</span></p>
-          <p>Concluídas <span>0</span></p>
+  <main class="main">
+    <a href="" id="add-button">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" width="2" height="14" fill="#DC4C3E" />
+        <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#DC4C3E" />
+      </svg>
+      Adicionar Tarefa
+    </a>
+
+    <div class="form hide">
+      <form id="myForm">
+        <div class="inputs">
+          <input type="text" id="title" name="title" placeholder="Nome da tarefa" autocomplete="off" required />
+          <input type="text" id="description" name="description" placeholder="Descrição" autocomplete="off" />
+
+          <div class="input-group">
+            <input type="date" name="date" id="date" placeholder="Data de vencimento" />
+            <select name="priority" id="priority" required>
+              <option selected disabled value="">
+                Prioridade
+              </option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+            </select>
+            <select name="complexity" id="complexity" required>
+              <option selected disabled value="">
+                Complexidade
+              </option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
         </div>
-        <div class="tasks"></div>
+        <div class="actions">
+          <button id="cancel">Cancelar</button>
+          <button type="submit" name="submit">Adicionar tarefa</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="container-tasks">
+      <div class="head">
+        <p>Tarefas Criadas <span>0</span></p>
+        <p>Concluídas <span>0</span></p>
       </div>
-    </main>
-    <script src="js/envia-task.js"></script>
-    <script src="js/task-form.js"></script>
-    <script
-      src="https://kit.fontawesome.com/998c60ef77.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/mode_dark.js"></script>
-  </body>
+      <div class="tasks"></div>
+    </div>
+  </main>
+  <script src="js/envia-task.js"></script>
+  <script src="js/task-form.js"></script>
+  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+  <script src="js/mode_dark.js"></script>
+</body>
+
 </html>
