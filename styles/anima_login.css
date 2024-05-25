@@ -1,22 +1,24 @@
-.card > input:focus {
-  outline: none;
-  transform: scale(1.02);
+.card>input:focus {
+    outline: none;
+    transform: scale(1.02);
 }
 
-.btn:hover {
-  transform: scale(1.04);
+.botao:hover{
+    transform: scale(1.04);
 }
 
-.btn:focus {
-  background-color: #5e60ce;
-  transform: scale(0.96);
-  transition: 0.05s;
+.botao:focus{
+    background-color: var(--color-purple);
+    transform: scale(0.98);
+    transition: .05s;
 }
 
-.cadastro_page > a:hover {
-  color: #5e60ce;
+.cadastro_page > a:hover{
+    color: var(--color-purple);
 }
 
-.mode > img:hover {
-  transform: scale(1.02);
+.cadastro_page > a:hover::after {
+    width: 100%;
+    right: 0;
+    background-color: var(--color-purple);
 }

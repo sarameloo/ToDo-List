@@ -5,33 +5,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
-  <link rel="stylesheet" href="styles/login.css">
-  <link rel="stylesheet" href="styles/anima_login.css">
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/anima_login.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="styles/mode_dark.css">
 </head>
 
 <body>
-  <div class="titulo">
-    <img class="logo" src="img/Logo.svg" alt="fogueteMuitoLouco" />
-    <h1 class="t-1">Quick</h1>
-    <h1 class="t-2">Task</h1>
-  </div>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/Logocompleta.svg" />
+      </div>
+      <ul class="nav">
+        <li>
+          <div>
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  
   <form class="card" action="php/teste_login.php" method="post">
     <h2>Login</h2>
-    <input type="email" name="email" placeholder="Email" required />
-    <input type="password" name="senha" placeholder="Senha" required />
+    <input class="dados" type="email" name="email" placeholder="Email" required />
+    <input class="dados" type="password" name="senha" placeholder="Senha" required />
     <button type="submit" class="botao">Logar</button>
   </form>
   <div class="cadastro_page">
     <p>Ainda não tem uma conta?</p>
-    <a href="http://localhost/dashboard/tarefas/cadastro.html">Cadastre-se</a>
+    <a class="link" href="http://localhost/dashboard/tarefas/cadastro.html">Cadastre-se</a>
   </div>
-  <div class="mode">
-    <img src="img/dark.svg" data-src="img/dark.svg" data-set="false" alt="lua_dark_mode" />
-  </div>
-
-
-<script src="js/logar.js"></script>
+  
 </body>
-
+<script src="js/logar.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+<script src="js/mode_dark_login.js"></script>
 </html>
