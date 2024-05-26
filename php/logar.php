@@ -3,21 +3,23 @@
 include 'conexao.php';
 session_start();
 
-$nome = $_POST["email"];
+$nome = $_POST["nome"];
 $senha = $_POST["senha"];
 
-$conferir_email = "select email from usuario where email = '$email'";
+$conferir_nome = "select email from usuario where nome = '$nome'";
 $conferir_senha = "select senha from usuario where senha = '$senha'";
 
-echo $conferir_email
-
-$result_email = $conn->query($conferir_email);
+$result_nome = $conn->query($conferir_nome);
 $result_senha = $conn->query($conferir_senha);
 
-if ($result_email->num_rows > 0 && $result_senha->num_rows > 0) {
-    while ($row = $result_email->fetch_assoc()) {
+if ($result_nome->num_rows > 0 && $result_senha->num_rows > 0) {
+    while ($row = $result_nome->fetch_assoc()) {
         $_SESSION['email'] = $row["email"];
     }
-} else {
-    echo "Email inválido";
+} else if ($result_nome->num_rows == 0 && $result_senha->num_rows > 0) {
+    echo "Nome inválido";
+} else if ($result_nome->num_rows > 0 && $result_senha->num_rows == 0) {
+    echo "Senha inválida";
+} else if ($result_nome->num_rows == 0 && $result_senha->num_rows == 0) {
+    echo "Nome e senha inválidos";
 }

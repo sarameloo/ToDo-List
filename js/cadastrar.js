@@ -4,7 +4,7 @@ meu_form.addEventListener('submit', event=>{
     event.preventDefault();
     let form_data = new FormData(meu_form);
     
-    fetch('php/logar.php', {
+    fetch('php/cadastrar.php', {
         method: 'POST',
         body: form_data
     })
@@ -18,19 +18,19 @@ meu_form.addEventListener('submit', event=>{
         let alerta_nome = document.querySelector('.a_nome');
         let alerta_senha = document.querySelector('.a_senha');
         switch(data){
-            case "Nome inválido":
+            case "Nome em uso":
                 alerta_nome.style.height = '1rem';
                 setTimeout(()=>{
                     alerta_nome.style.height = '0rem';
                 }, 3000);
                 break;
-            case "Senha inválida":
+            case "Email em uso":
                 alerta_senha.style.height = '1rem';
                 setTimeout(()=>{
                     alerta_senha.style.height = '0rem';
                 }, 3000);
                 break;
-            case "Nome e senha inválidos":
+            case "Nome e email em uso":
                 alerta_nome.style.height = '1rem';
                 alerta_senha.style.height = '1rem';
                 setTimeout(()=>{
@@ -39,7 +39,7 @@ meu_form.addEventListener('submit', event=>{
                 }, 3000);
                 break;
             default:
-                window.location.href = "http://localhost/quick_task_v2/teste_login.php";
+                alert('Vai comer abôbora, melancia, banana, manga. Vai todo mundo se fuder!')
                 break;
         }
     })
