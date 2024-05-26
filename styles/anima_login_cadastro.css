@@ -3,22 +3,16 @@
     transform: scale(1.02);
 }
 
-.botao:hover{
+.botao:hover {
     transform: scale(1.04);
 }
 
-.botao:focus{
+.botao:focus {
     background-color: var(--color-purple);
     transform: scale(0.98);
     transition: .05s;
 }
 
-.cadastro_page > a:hover{
+.link:hover {
     color: var(--color-purple);
-}
-
-.cadastro_page > a:hover::after {
-    width: 100%;
-    right: 0;
-    background-color: var(--color-purple);
 }

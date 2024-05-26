@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="anima_cadastro.css">
-    <link rel="stylesheet" href="styles/cadastro.css">
-    <script src="cadastrar.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mode_dark.css">
+    <link rel="stylesheet" href="styles/anima_login_cadastro.css">
+    <link rel="stylesheet" href="styles/login_cadastro.css">
     <title>Cadastro</title>
 </head>
 <body>
-    <div class="titulo">
-        <img src="img/logo.svg" alt="fogueteMuitoLoco">
-        <h1 class="t-1">Quick</h1>
-        <h1 class="t-2">Task</h1>
-    </div>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/Logocompleta.svg" />
+            </div>
+            <ul class="nav">
+                <li>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
 
     <form class="card">
         <h2>Cadastro</h2>
@@ -22,16 +37,15 @@
         <p class="alerta a_senha">*Email já cadastrado*</p>
         <input type="text" name="email" placeholder="Email" required>
         <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit" class="btn">Cadastrar</button>
+        <button type="submit" class="botao">Cadastrar</button>
     </form>
 
-    <div class="login_page">
+    <div class="trocar_page">
         <p>Já possui uma conta? Faça o seu </p>
-        <a href="login.html">login</a>
-    </div>
-
-    <div class="mode">
-        <img src="img/dark.svg" data-src="img/dark.svg" data-set="false" alt="lua_dark_mode">
+        <a class="link" href="login.html">login</a>
     </div>
 </body>
+<script src="js/cadastro.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+<script src="js/mode_dark_login.js"></script>
 </html>
