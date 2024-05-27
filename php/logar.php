@@ -1,25 +1,21 @@
 <?php
 
 include 'conexao.php';
-session_start();
 
-$nome = $_POST["nome"];
+$email = $_POST["email"];
 $senha = $_POST["senha"];
 
-$conferir_nome = "select email from usuario where nome = '$nome'";
-$conferir_senha = "select senha from usuario where senha = '$senha'";
+$query_email = $conn->query("select email from usuario where email = '$email'");
+$query_senha = $conn->query("select senha from usuario where email = '$email'");
 
-$result_nome = $conn->query($conferir_nome);
-$result_senha = $conn->query($conferir_senha);
-
-if ($result_nome->num_rows > 0 && $result_senha->num_rows > 0) {
-    while ($row = $result_nome->fetch_assoc()) {
-        $_SESSION['email'] = $row["email"];
+if ($query_email->num_rows > 0) {
+    $row_senha = $query_senha->fetch_assoc();
+    if (password_verify($senha, $row_senha['senha'])) {
+        echo "Receba!!!";
+    }else {
+        echo "Senha incorreta";
     }
-} else if ($result_nome->num_rows == 0 && $result_senha->num_rows > 0) {
-    echo "Nome inválido";
-} else if ($result_nome->num_rows > 0 && $result_senha->num_rows == 0) {
-    echo "Senha inválida";
-} else if ($result_nome->num_rows == 0 && $result_senha->num_rows == 0) {
-    echo "Nome e senha inválidos";
+}
+else {
+    echo "Email incorreto";
 }

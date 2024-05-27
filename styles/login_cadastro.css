@@ -94,8 +94,9 @@ body {
   transition: .2s;
 }
 
-.a_nome.show,
-.a_email.show{
+.a_nome-email.show,
+.a_email.show,
+.a_senha.show{
   height: 1rem;
   margin-bottom: .7rem;
 }

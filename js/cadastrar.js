@@ -15,7 +15,7 @@ meu_form.addEventListener('submit', event=>{
         return response.text();
     })
     .then(data =>{
-        let alerta_nome = document.querySelector('.a_nome');
+        let alerta_nome = document.querySelector('.a_nome-email');
         let alerta_email = document.querySelector('.a_email');
         switch(data){
             case "Nome em uso":
@@ -39,7 +39,7 @@ meu_form.addEventListener('submit', event=>{
                 }, 2700);
                 break;
             default:
-                alert('Vai comer abôbora, melancia, banana, manga. Vai todo mundo se fuder!')
+                window.location.href = 'http://localhost/GitHub/ToDo-List/login.html'
                 break;
         }
     })

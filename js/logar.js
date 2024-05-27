@@ -15,31 +15,24 @@ meu_form.addEventListener('submit', event=>{
         return response.text();
     })
     .then(data =>{
-        let alerta_nome = document.querySelector('.a_nome');
+        let alerta_email = document.querySelector('.a_nome-email');
         let alerta_senha = document.querySelector('.a_senha');
         switch(data){
-            case "Nome inválido":
-                alerta_nome.style.height = '1rem';
+            case "Email incorreto":
+                alerta_email.classList.toggle('show');
                 setTimeout(()=>{
-                    alerta_nome.style.height = '0rem';
-                }, 3000);
+                    alerta_email.classList.toggle('show');
+                }, 2700);
                 break;
-            case "Senha inválida":
-                alerta_senha.style.height = '1rem';
+            case "Senha incorreta":
+                alerta_senha.classList.toggle('show');
                 setTimeout(()=>{
-                    alerta_senha.style.height = '0rem';
-                }, 3000);
-                break;
-            case "Nome e senha inválidos":
-                alerta_nome.style.height = '1rem';
-                alerta_senha.style.height = '1rem';
-                setTimeout(()=>{
-                    alerta_nome.style.height = '0rem';
-                    alerta_senha.style.height = '0rem';
-                }, 3000);
+                    alerta_senha.classList.toggle('show');
+                }, 2700);
                 break;
             default:
-                window.location.href = "http://localhost/quick_task_v2/teste_login.php";
+                //window.location.href = "http://localhost/quick_task_v2/teste_login.php";
+                alert(data)
                 break;
         }
     })
