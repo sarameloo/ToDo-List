@@ -14,6 +14,7 @@ $query_nome = $conn->query($conferir_nome);
 if ($query_email->num_rows == 0 && $query_nome->num_rows == 0) {
     $hash_senha = password_hash($senha, PASSWORD_DEFAULT);
     $conn->query("insert into usuario (email, nome, senha) values ('$email', '$nome', '$hash_senha')");
+    echo "Cadastrado";
 } else if ($query_email->num_rows == 0 && $query_nome->num_rows > 0) {
     echo "Nome em uso";
 } else if ($query_email->num_rows > 0 && $query_nome->num_rows == 0) {

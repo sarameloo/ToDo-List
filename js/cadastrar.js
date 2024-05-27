@@ -16,27 +16,27 @@ meu_form.addEventListener('submit', event=>{
     })
     .then(data =>{
         let alerta_nome = document.querySelector('.a_nome');
-        let alerta_senha = document.querySelector('.a_senha');
+        let alerta_email = document.querySelector('.a_email');
         switch(data){
             case "Nome em uso":
-                alerta_nome.style.height = '1rem';
+                alerta_nome.classList.toggle('show');
                 setTimeout(()=>{
-                    alerta_nome.style.height = '0rem';
-                }, 3000);
+                    alerta_nome.classList.toggle('show');
+                }, 2700);
                 break;
             case "Email em uso":
-                alerta_senha.style.height = '1rem';
+                alerta_email.classList.toggle('show');
                 setTimeout(()=>{
-                    alerta_senha.style.height = '0rem';
-                }, 3000);
+                    alerta_email.classList.toggle('show');
+                }, 2700);
                 break;
             case "Nome e email em uso":
-                alerta_nome.style.height = '1rem';
-                alerta_senha.style.height = '1rem';
+                alerta_nome.classList.toggle('show');
+                alerta_email.classList.toggle('show');
                 setTimeout(()=>{
-                    alerta_nome.style.height = '0rem';
-                    alerta_senha.style.height = '0rem';
-                }, 3000);
+                    alerta_nome.classList.toggle('show');
+                    alerta_email.classList.toggle('show');
+                }, 2700);
                 break;
             default:
                 alert('Vai comer abôbora, melancia, banana, manga. Vai todo mundo se fuder!')
