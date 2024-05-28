@@ -1,7 +1,7 @@
 const myForm = document.querySelector("#myForm");
+
 myForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
   let form_data = new FormData(myForm);
 
   fetch("php/cadastrar-task.php", {

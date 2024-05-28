@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/mode_dark.css">
-    <link rel="stylesheet" href="styles/anima_login_cadastro.css">
-    <link rel="stylesheet" href="styles/login_cadastro.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles/historico.css">
+    <title>Histórico de Tarefas</title>
 </head>
 <body>
     <header class="header">
@@ -26,26 +24,21 @@
                         </label>
                     </div>
                 </li>
+                <li>
+                    <a href=""><img src="./img/Profile.svg" id="profile-img" /></a>
+                </li>
             </ul>
         </div>
     </header>
 
-    <form class="card">
-        <h2>Cadastro</h2>
-        <p class="alerta a_nome-email">*Nome já em uso*</p>
-        <input type="text" name="nome" placeholder="Nome" required>
-        <p class="alerta a_email">*Email já cadastrado*</p>
-        <input type="text" name="email" placeholder="Email" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit" class="botao">Cadastrar</button>
-    </form>
-
-    <div class="trocar_page">
-        <p>Já possui uma conta? Faça o seu </p>
-        <a class="link" href="http://localhost/GitHub/ToDo-List/login.html">login</a>
+    <div class="historico">
+        <div class="navegacao">
+            <p>Tarefas concluidas <span>0</span></p>
+            <a href="#">Criar tarefas <span>+</span></a>
+        </div>
     </div>
+
+
 </body>
-<script src="js/cadastrar.js"></script>
 <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-<script src="js/mode_dark_login_cadastro.js"></script>
 </html>
