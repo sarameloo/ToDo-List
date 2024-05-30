@@ -39,7 +39,7 @@ meu_form.addEventListener('submit', event=>{
                 }, 2700);
                 break;
             default:
-                window.location.href = 'http://localhost/GitHub/ToDo-List/login.html'
+                window.location.href = 'login.html';
                 break;
         }
     })

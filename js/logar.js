@@ -31,8 +31,7 @@ meu_form.addEventListener('submit', event=>{
                 }, 2700);
                 break;
             default:
-                //window.location.href = "http://localhost/quick_task_v2/teste_login.php";
-                alert(data)
+                window.location.href = "inicio.html";
                 break;
         }
     })
