@@ -1,0 +1,21 @@
+.logout:hover{
+    transform: scale(1.04);
+    box-shadow: 2px 3px 6px var(--color-gray-80);
+}
+
+.excluir-conta:hover{
+    transform: scale(1.04);
+    box-shadow: 2px 3px 6px var(--color-gray-80);
+}
+
+.logout:focus{
+    background-color: var(--color-purple);
+    transform: scale(0.98);
+    transition: .05s;
+}
+
+.excluir-conta:focus{
+    background-color: var(--color-purple);
+    transform: scale(0.98);
+    transition: .05s;
+}

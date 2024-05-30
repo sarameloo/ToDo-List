@@ -18,7 +18,7 @@ myForm.addEventListener("submit", (event) => {
       if (data.length > 0) {
         setTimeout(() => {
           myForm.reset();
-        }, 2000);
+        }, 3000);
         alert(data);
       }
     })

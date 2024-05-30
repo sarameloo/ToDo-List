@@ -7,6 +7,7 @@
   <title>Inicio</title>
   <link rel="stylesheet" href="styles/inicio.css">
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/anima_incio.css">
 </head>
 
 <body>
@@ -28,6 +29,19 @@
         </li>
         <li>
           <button class="profile"><img src="./img/Profile.svg" id="profile-img" /></button>
+          <ul class="profile-options">
+            <li class="nome">viniciusfelix01@gmail.com</li>
+            <li class="options">
+              <button class="logout">
+                <ion-icon name="log-out-outline"></ion-icon>
+                Sair
+              </button>
+              <button class="excluir-conta">
+                <ion-icon name="close-circle-outline"></ion-icon>
+                Excluir
+              </button>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -88,8 +102,11 @@
   <script src="js/envia-task.js"></script>
   <script src="js/task-form.js"></script>
   <script src="js/logout.js"></script>
-  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+  <script src="js/excluir_conta.js"></script>
   <script src="js/mode_dark.js"></script>
+  <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

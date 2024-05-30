@@ -15,5 +15,6 @@ $query_insert = "insert into tarefa (titulo, descricao, prazo, prioridade, compl
 
 $conn->query($query_insert);
 
+echo "Terefa cadastrada";
 
 ?>
