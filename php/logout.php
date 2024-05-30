@@ -1,7 +1,8 @@
 <?php 
+
 session_start();
-echo $_SESSION['email'] . "\n";
+$_SESSION['email'] = '';
 session_destroy();
-echo "Logout";
+http_response_code(200);
 
 ?>
