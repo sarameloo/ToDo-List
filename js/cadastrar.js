@@ -3,10 +3,11 @@ const meu_form = document.querySelector('.card');
 meu_form.addEventListener('submit', event=>{
     event.preventDefault();
     let form_data = new FormData(meu_form);
+    console.log(form_data)
     
     fetch('php/cadastrar.php', {
         method: 'POST',
-        body: form_data
+        body: form_data,
     })
     .then(response =>{
         if(!response.ok){
