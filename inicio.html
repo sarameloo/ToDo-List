@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio</title>
-  <link rel="stylesheet" href="styles/inicio.css">
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/task.css">
 </head>
 
 <body>
@@ -80,13 +80,34 @@
         <p>Tarefas Criadas <span>0</span></p>
         <p>Concluídas <span>0</span></p>
       </div>
-      <div class="tasks"></div>
+      <div class="tasks">
+        <ul>
+          <li class="task">
+            <button class="check-task">
+              <img src="./img/check.png" alt="" id="check">
+            </button>
+            <div class="infor">
+              <p class="title-task">Titulo</p>
+              <p class="description-task">Descrição</p>
+              <span>Data</span>
+              <span>Prioridade</span>
+              <span>Complexidade</span>
+            </div>
+            <button class="delete-task">
+              <img src="./img/delete.png" alt="">
+            </button>
+          </li>
+          
+          
+        </ul>
+      </div>
     </div>
   </main>
   <script src="js/envia-task.js"></script>
   <script src="js/task-form.js"></script>
   <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
   <script src="js/mode_dark.js"></script>
+  <script src="js/check.js"></script>
 </body>
 
 </html>

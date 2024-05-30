@@ -1,0 +1,53 @@
+.tasks {
+    margin: 2.5rem 0;
+}
+
+.task {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #f1f1f1;
+    margin-bottom: 2rem;
+}
+
+.task button {
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.task img {
+    width: 1.5rem;
+}
+
+.task .infor{
+    margin-left: -300px;
+}
+
+.task .title-task {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.task .title-task.checked {
+    text-decoration: line-through;
+} 
+
+.task .description-task {
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.task span {
+    font-size: 15px;
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.check-task, .delete-task {
+    display: flex;
+}
