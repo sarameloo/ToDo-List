@@ -9,13 +9,37 @@
 }
 
 .logout:focus{
-    background-color: var(--color-purple);
+    background-color: var(--color-blue);
     transform: scale(0.98);
     transition: .05s;
 }
 
 .excluir-conta:focus{
-    background-color: var(--color-purple);
+    background-color: var(--color-blue);
     transform: scale(0.98);
     transition: .05s;
+}
+
+.add-task:hover{
+    transform: scale(1.04);
+    box-shadow: 2px 3px 6px var(--color-gray-80);
+}
+
+.cancel:hover{
+    transform: scale(1.04);
+    box-shadow: 2px 3px 6px var(--color-gray-80);
+}
+
+.add-task:focus{
+    background-color: var(--color-red);
+    transition: .05s;
+}
+
+.cancel:focus{
+    background-color: var(--color-gray-30);
+    transition: .05s;
+}
+
+.trocar-historico:hover{
+    color: var(--color-purple);
 }

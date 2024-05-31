@@ -34,6 +34,7 @@ body {
   font-family: var(--font-mono);
   color: var(--color-gray-60);
   font-size: var(--font-size-16);
+  background-color: var(--color-dark-body);
 }
 
 .container {
@@ -48,10 +49,13 @@ body {
   cursor: pointer;
   margin-top: .3rem;
   background-color: transparent;
+  img{
+    transform: scale(1.2)
+  }
 }
 
 .profile-options{
-  background-color: var(--color-white-01);
+  background-color: var(--color-dark-body);
   width: 20rem;
   position: absolute;
   display: flex;
@@ -61,6 +65,7 @@ body {
   gap: 3rem;
   padding: 0;
   border-radius: .5rem;
+  color: var(--color-gray-20);
   box-shadow: 2px 3px 6px var(--color-gray-80); 
   height: 0;
   overflow: hidden;
@@ -100,8 +105,8 @@ body {
   gap: .3rem;
   width: 7rem;
   height: 2rem;
-  color: var(--color-white-01);
-  background-color: var(--color-blue);
+  color: var(--color-gray-20);
+  background-color: var(--color-purple);
   cursor: pointer;
   transition: .2s;
 }
@@ -118,10 +123,10 @@ body {
 
 .header {
   padding: 4rem 0;
-  background-color: var(--color-white-40);
+  background-color: var(--color-dark-header);
   transition: background 0.2s linear;
   margin-bottom: 8rem;
-  box-shadow: 0px 3px 6px var(--color-gray-80);
+  box-shadow: 0 3px 8px var(--color-gray-80);
 }
 
 .logo {
@@ -162,16 +167,12 @@ body {
 .container-tasks .head {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--color-gray-80);
+  border-bottom: 1px solid var(--color-gray-70);
   padding-bottom: 6px;
 }
 
-.container-tasks .head p {
-  font-weight: bold;
-}
-
 .container-tasks .head span {
-  background: var(--color-gray-60);
+  background: var(--color-black-80);
   padding: 1px 10px;
   border-radius: 2rem;
   color: var(--color-white-01);
@@ -179,15 +180,17 @@ body {
 
 .container-tasks .head p:first-child {
   color: var(--color-blue);
-}
-
-.container-tasks .head a:last-child {
-  color: var(--color-purple);
   font-weight: bold;
 }
 
+.container-tasks .head a:last-child {
+  color: var(--color-blue);
+  font-weight: bold;
+  transition: .3s;
+}
+
 .form {
-  border: 1.5px solid var(--color-gray-20);
+  border: 1.5px solid var(--color-gray-60);
   border-radius: 8px;
   padding: 1rem 0;
 }
@@ -215,21 +218,21 @@ body {
 }
 
 .form #title {
-  color: var(--color-gray-70);
+  color: var(--color-gray-60);
   font-weight: bold;
   font-size: 1.125rem;
 }
 
 .form #description {
-  color: var(--color-gray-70);
+  color: var(--color-gray-60);
   font-size: 1rem;
 }
 
 .form input[type="date"] {
   border: none;
   outline: none;
-  border: 1px solid var(--color-gray-30);
-  color: var(--color-gray-70);
+  border: 1px solid var(--color-gray-70);
+  color: var(--color-gray-60);
   border-radius: 5px;
   padding: 7px;
   font-family: var(--font-mono);
@@ -250,8 +253,8 @@ select#priority {
   text-overflow: "";
   border: none;
   outline: none;
-  border: 1px solid var(--color-gray-30);
-  color: var(--color-gray-70);
+  border: 1px solid var(--color-gray-70);
+  color: var(--color-gray-60);
   border-radius: 5px;
   padding: 8px 20px 8px 10px;
   background-color: transparent;
@@ -271,8 +274,8 @@ select#complexity {
   text-overflow: "";
   border: none;
   outline: none;
-  border: 1px solid var(--color-gray-30);
-  color: var(--color-gray-70);
+  border: 1px solid var(--color-gray-70);
+  color: var(--color-gray-60);
   border-radius: 5px;
   padding: 8px 20px 8px 10px;
   background-color: transparent;
@@ -290,39 +293,32 @@ select#complexity {
 }
 
 .actions {
-  border-top: 1px solid var(--color-gray-20);
+  border-top: 1px solid var(--color-gray-60);
   padding: 2rem 2rem 1rem 2rem;
   display: flex;
   justify-content: flex-end;
   font-family: var(--font-mono);
 }
 
-.actions button {
+
+.add-task, .cancel {
   cursor: pointer;
   font-weight: bold;
   border: none;
   outline: none;
   border-radius: 5px;
-  color: var(--color-black-80);
   padding: 0.5rem 1rem;
   margin-left: 2.5rem;
   font-family: var(--font-mono);
+  transition: .3s ease-in-out;
 }
 
-.actions button[type="submit"] {
-  cursor: pointer;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  border-radius: 5px;
+.add-task{
   background-color: var(--color-red-20);
   color: var(--color-white-01);
-  padding: 0.5rem 1rem;
-  margin-left: 2.5rem;
-  font-family: var(--font-mono);
 }
 
-.actions button[type="submit"]:hover {
-  background-color: var(--color-red);
-  transition: 0.3s ease-in-out;
+.cancel{
+  background-color: var(--color-gray-60);
+  color: var(--color-gray-20);
 }

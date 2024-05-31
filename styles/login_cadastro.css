@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: var(--color-white-01);
+  background: var(--color-dark-body);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -18,21 +18,17 @@ body {
 
 /* Titulo */
 
-.container {
-  max-width: 720px;
+.cabecalho{
+  width: 100vw;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.header {
   padding: 4rem 0;
-  background-color: var(--color-white-40);
+  background-color: var(--color-dark-header);
+  box-shadow: 0 3px 8px var(--color-gray-80);
   transition: background 0.2s linear;
-  width: 100vw;
   margin-bottom: 8rem;
-  box-shadow: 0px 3px 6px var(--color-gray-80);
 }
 
 .logo {
@@ -55,32 +51,43 @@ body {
   transition: .2s;
 }
 
-.card > h2 {
-  font-size: 25pt;
-  margin-bottom: 5rem;
-  color: var(--color-black-02);
-  transition: .2s;
-}
+.card {
+  background-color: var(--color-dark-header);
+  box-shadow: 2px 3px 6px var(--color-gray-80);
 
-.card > input {
-  background-color: var(--color-gray-20);
-  margin-bottom: 1rem;
-  width: 32rem;
-  height: 2.7rem;
-  padding: 0.2rem 0.8rem;
-  border: none;
-  border-radius: .5rem;
-  font-family: "Roboto Mono";
-  font-size: var(--font-size-12);
-  color: var(--color-black-02);
-  box-shadow: 2px 3px 3px var(--color-gray-80);
-  transition: 0.3s;
-}
+  h2 {
+    color: var(--color-gray-30);
+    font-size: 25pt;
+    margin-bottom: 5rem;
+    transition: .2s;
+  }
 
-.card > input::placeholder{
-  color: var(--color-black-02);
-  font-size: var(--font-size-12);
-  transition: .2s;
+  input {
+    background-color: var(--color-black-80);
+    color: var(--color-gray-20);
+    box-shadow: 2px 3px 6px var(--color-gray-80);
+    margin-bottom: 1rem;
+    width: 32rem;
+    height: 2.7rem;
+    padding: 0.2rem 0.8rem;
+    border: none;
+    border-radius: .5rem;
+    font-family: "Roboto Mono";
+    font-size: var(--font-size-12);
+    transition: 0.3s;
+  }
+
+  input::placeholder {
+    color: var(--color-gray-20);
+    font-size: var(--font-size-12);
+    transition: .2s;
+  }
+
+  .botao {
+    background-color: var(--color-purple);
+    color: var(--color-gray-20);
+    box-shadow: 2px 3px 6px var(--color-gray-80);
+  }
 }
 
 .alerta{
@@ -133,7 +140,7 @@ body {
 }
 
 .link {
-  color: var(--color-blue);
+  color: var(--color-purple);
   text-decoration: underline;
   transition: 0.12s;
 }

@@ -8,11 +8,11 @@
 }
 
 .botao:focus {
-    background-color: var(--color-purple);
+    background-color: var(--color-blue);
     transform: scale(0.98);
     transition: .05s;
 }
 
 .link:hover {
-    color: var(--color-purple);
+    color: var(--color-blue);
 }
