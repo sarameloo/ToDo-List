@@ -1,3 +1,9 @@
+.profile:hover{
+    img{
+        transform: scale(1.06);
+    }
+}
+
 .logout:hover{
     transform: scale(1.04);
     box-shadow: 2px 3px 6px var(--color-gray-80);
@@ -40,6 +46,29 @@
     transition: .05s;
 }
 
-.trocar-historico:hover{
-    color: var(--color-purple);
+.trocar-historico:hover {
+    transform: scale(1.04);
+}
+
+.trocar-historico:focus{
+    color: var(--color-blue);
+    transition: .05s;
+}
+
+.check:hover{
+    transform: scale(1.1);
+}
+
+.check:focus{
+    transform: scale(0.96);
+    transition: .05s;
+}
+
+.delete:hover{
+    transform: scale(1.1);
+}
+
+.delete:focus{
+    transform: scale(0.96);
+    transition: .05s;
 }
