@@ -11,11 +11,10 @@ window.addEventListener('load', function(event){
     if(!response.ok){
       throw new Error('Falha na requisição');
     }
-    return response.text;
+    return response.text();
   })
   .then(data=>{
-    // nome.textContent=data;
-    console.log(data)
+    nome.textContent=data;
   })
   .catch(error=>{
     console.log(error)
