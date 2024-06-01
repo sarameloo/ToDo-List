@@ -17,8 +17,21 @@ add_task.addEventListener('click', ()=>{
   // console.log(title, description, date, priority, complexity);
 
 fetch ('php/buscando_task.php', {
-  
+  method: 'POST'
 })
+.then(response=>{
+  if(!response.ok){
+    throw new Error('falha na requisição');
+  }
+  return response.text();
+})
+.then(data=>{
+  console.log(data);
+})
+.catch(error=>{
+  console.log(error);
+})
+
 
   task_list.innerHTML += [
     '<div class="task">',
