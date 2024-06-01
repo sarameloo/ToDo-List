@@ -69,7 +69,7 @@ myForm.addEventListener("submit", (event) => {
   });
 });
 
-window.addEventListener('load', function(){
+window.addEventListener('load', ()=>{
   fetch('php/pegando_tasks.php', {
     method: 'POST'
   })
@@ -81,14 +81,16 @@ window.addEventListener('load', function(){
   })
   .then(data=>{
     const tarefa = data;
-    data.forEach(task => {
-      console.log(`ID da tarefa: ${task.id_tarefa}`);
-      console.log(`Descrição: ${task.descricao}`);
-      console.log(`Data de criação: ${task.data_criacao}`);
-      console.log(`Status: ${task.status}`);
-      console.log(`ID do usuário: ${task.id_usuario}`);
-      console.log('---');
-    });
+    for (let i = 0; i < data.lenght; i ++){
+      console.log(data[i].titulo);
+    }
+  })
+  .catch(error=>{
+    console.log(error);
+  })
+    
+
+});
     // task_list.innerHTML+= [
     //   `<div class="task" id = "${tarefa.id_tarefa}">`,
     //     '<div class="check-task">',
@@ -114,8 +116,6 @@ window.addEventListener('load', function(){
     //     '</div>',
     //   '</div>',
     // ].join('');
-  })
-})
 
 
 
