@@ -84,14 +84,32 @@ window.addEventListener('load', event=>{
   .then(data=>{
     let task = data;
     task.forEach(element => {
-      console.log(element.id_tarefa);
-      console.log(element.titulo);
-      console.log(element.descricao);
-      console.log(element.prazo);
-      console.log(element.prioridade);
-      console.log(element.complexidade);
-      console.log(element.id_usuario);
-      console.log(element.status);
+      task_list.innerHTML+= [
+        `<div class="task" id = "${element.id_tarefa}">`,
+          '<div class="check-task">',
+            '<button class="check">',
+              '<img src="./img/check.png" width="24px" alt="" id="check">',
+            '</button>',
+          '</div>',
+          '<div class="infor">',
+            `<p class="title-task">${element.titulo}</p>`,
+            '<div class="description">',
+              `<p class="description-task">${element.descricao}</p>`,
+            '</div>',
+            '<div class="DPC">',
+              `<span>${element.prazo}</span>`,
+              `<span>${element.prioridade}</span>`,
+              `<span>${element.complexidade}</span>`,
+            '</div>',
+          '</div>',
+          '<div class="excluir-task">',
+            '<button class="delete">',
+              '<img src="./img/delete.png" width="24px" alt="">',
+            '</button>',
+          '</div>',
+        '</div>',
+      ].join('');
+      
     });
   })
   .catch(error=>{
@@ -100,31 +118,6 @@ window.addEventListener('load', event=>{
     
 
 });
-    // task_list.innerHTML+= [
-    //   `<div class="task" id = "${tarefa.id_tarefa}">`,
-    //     '<div class="check-task">',
-    //       '<button class="check">',
-    //         '<img src="./img/check.png" width="24px" alt="" id="check">',
-    //       '</button>',
-    //     '</div>',
-    //     '<div class="infor">',
-    //       `<p class="title-task">${tarefa.titulo}</p>`,
-    //       '<div class="description">',
-    //         `<p class="description-task">${tarefa.descricao}</p>`,
-    //       '</div>',
-    //       '<div class="DPC">',
-    //         `<span>${tarefa.prazo}</span>`,
-    //         `<span>${tarefa.prioridade}</span>`,
-    //         `<span>${tarefa.complexidade}</span>`,
-    //       '</div>',
-    //     '</div>',
-    //     '<div class="excluir-task">',
-    //       '<button class="delete">',
-    //         '<img src="./img/delete.png" width="24px" alt="">',
-    //       '</button>',
-    //     '</div>',
-    //   '</div>',
-    // ].join('');
 
 
 
