@@ -23,10 +23,10 @@ fetch ('php/buscando_task.php', {
   if(!response.ok){
     throw new Error('falha na requisição');
   }
-  return response.text();
+  return response.json();
 })
 .then(data=>{
-  console.log(data);
+  console.log(data.descricao);
 })
 .catch(error=>{
   console.log(error);

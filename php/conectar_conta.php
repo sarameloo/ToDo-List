@@ -14,4 +14,5 @@ $nome = $row['nome'];
 $stmt->close();
 echo "$nome";
 
+
 ?>

@@ -11,12 +11,11 @@ $complexidade = $_POST["complexity"]; //pegando complexidade
 $status = "criada"; //status criado
 $id_usuario = $_SESSION['email']; //pegando email da sessão
 
-$query_insert = "insert into tarefa (titulo, descricao, prazo, prioridade, complexidade, status,id_usuario) values ('$titulo', '$descricao', '$prazo', '$prioridade', '$complexidade', '$status','$id_usuario')";
+$query_insert = "insert into tarefa (titulo, descricao, prazo, prioridade, complexidade, status, id_usuario) values ('$titulo', '$descricao', '$prazo', '$prioridade', '$complexidade', '$status','$id_usuario')";
 //comando de inserção de dados
 
 $conn->query($query_insert);
 //inserindo dados da task no banco de dados
-
-echo "Terefa cadastrada";
+echo "Tarefa cadastrada"
 
 ?>
