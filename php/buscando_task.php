@@ -1,13 +1,15 @@
-<?php
+<?php 
 
- include 'conexao.php';
- session_start();
+include 'conexao.php';
+session_start();
 
- $email = $_SESSION['email'];
- $query_terefas = "select * from tarefa where email = ?";
+$email = $_SESSION['email'];
+$stmt = $conn->prepare("select * from tarefa where = ?");
+$stmt->bind_param("s", $email);
+if($stmt->execute()){
+    if($stmt->num_rows()>0){
+        echo "bla bla bla";
+    }
+}
 
- $stmt = $conn->prepare($query_terefas);
- $stmt->bind_param("s", $email);
- if($stmt->execute()){
-  echo "bla bla bla";
- }
+?>
