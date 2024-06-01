@@ -69,7 +69,9 @@ myForm.addEventListener("submit", (event) => {
   });
 });
 
-window.addEventListener('load', ()=>{
+window.addEventListener('load', event=>{
+  event.preventDefault();
+  
   fetch('php/pegando_tasks.php', {
     method: 'POST'
   })
@@ -80,10 +82,17 @@ window.addEventListener('load', ()=>{
     return response.json();
   })
   .then(data=>{
-    const tarefa = data;
-    for (let i = 0; i < data.lenght; i ++){
-      console.log(data[i].titulo);
-    }
+    let task = data;
+    task.forEach(element => {
+      console.log(element.id_tarefa);
+      console.log(element.titulo);
+      console.log(element.descricao);
+      console.log(element.prazo);
+      console.log(element.prioridade);
+      console.log(element.complexidade);
+      console.log(element.id_usuario);
+      console.log(element.status);
+    });
   })
   .catch(error=>{
     console.log(error);
