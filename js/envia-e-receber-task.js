@@ -36,7 +36,7 @@ myForm.addEventListener("submit", (event) => {
       task_list.innerHTML += [
         `<div class="task" id="${tarefa.id_tarefa}">`,
           '<div class="check-task">',
-            '<button class="check">',
+            '<button class="concluir">',
               '<img src="./img/check.png" width="24px" alt="" id="check">',
             '</button>',
           '</div>',
@@ -87,7 +87,7 @@ window.addEventListener('load', event=>{
       task_list.innerHTML+= [
         `<div class = "task" id="${element.id_tarefa}">`,
           '<div class="check-task">',
-            '<button class="check">',
+            '<button class="concluir">',
               '<img src="./img/check.png" width="24px" alt="" id="check">',
             '</button>',
           '</div>',

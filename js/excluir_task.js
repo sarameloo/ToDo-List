@@ -2,7 +2,8 @@ function deletar_task(){
     var tarefas = document.querySelectorAll('.task');
     tarefas.forEach(task=>{
         var btn_delete = task.querySelector('.delete');
-        btn_delete.addEventListener('click', ()=>{
+        btn_delete.addEventListener('click', (event)=>{
+            event.preventDefault();
             fetch('php/excluir_task.php',{
                 method: 'POST',
                 headers: {
