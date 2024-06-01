@@ -1,4 +1,5 @@
 const myForm = document.querySelector("#myForm");
+const task_list = document.querySelector('.task-list');
 
 myForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -31,7 +32,6 @@ myForm.addEventListener("submit", (event) => {
       return response2.json();
     })
     .then(data2=>{
-      const task_list = document.querySelector('.task-list');
       let tarefa = data2;
       task_list.innerHTML += [
         `<div class="task" id = "${tarefa.id_tarefa}">`,
@@ -68,6 +68,54 @@ myForm.addEventListener("submit", (event) => {
     alert(error);
   });
 });
+
+window.addEventListener('load', function(){
+  fetch('php/pegando_tasks.php', {
+    method: 'POST'
+  })
+  .then(response=>{
+    if(!response.ok){
+      throw new Error('falha na requisição');
+    }
+    return response.json();
+  })
+  .then(data=>{
+    const tarefa = data;
+    data.forEach(task => {
+      console.log(`ID da tarefa: ${task.id_tarefa}`);
+      console.log(`Descrição: ${task.descricao}`);
+      console.log(`Data de criação: ${task.data_criacao}`);
+      console.log(`Status: ${task.status}`);
+      console.log(`ID do usuário: ${task.id_usuario}`);
+      console.log('---');
+    });
+    // task_list.innerHTML+= [
+    //   `<div class="task" id = "${tarefa.id_tarefa}">`,
+    //     '<div class="check-task">',
+    //       '<button class="check">',
+    //         '<img src="./img/check.png" width="24px" alt="" id="check">',
+    //       '</button>',
+    //     '</div>',
+    //     '<div class="infor">',
+    //       `<p class="title-task">${tarefa.titulo}</p>`,
+    //       '<div class="description">',
+    //         `<p class="description-task">${tarefa.descricao}</p>`,
+    //       '</div>',
+    //       '<div class="DPC">',
+    //         `<span>${tarefa.prazo}</span>`,
+    //         `<span>${tarefa.prioridade}</span>`,
+    //         `<span>${tarefa.complexidade}</span>`,
+    //       '</div>',
+    //     '</div>',
+    //     '<div class="excluir-task">',
+    //       '<button class="delete">',
+    //         '<img src="./img/delete.png" width="24px" alt="">',
+    //       '</button>',
+    //     '</div>',
+    //   '</div>',
+    // ].join('');
+  })
+})
 
 
 
