@@ -34,7 +34,7 @@ myForm.addEventListener("submit", (event) => {
     .then(data2=>{
       let tarefa = data2;
       task_list.innerHTML += [
-        `<div class="task" id = "${tarefa.id_tarefa}">`,
+        `<div class="task" id="${tarefa.id_tarefa}">`,
           '<div class="check-task">',
             '<button class="check">',
               '<img src="./img/check.png" width="24px" alt="" id="check">',
@@ -85,7 +85,7 @@ window.addEventListener('load', event=>{
     let task = data;
     task.forEach(element => {
       task_list.innerHTML+= [
-        `<div class="task" id = "${element.id_tarefa}">`,
+        `<div class = "task" id="${element.id_tarefa}">`,
           '<div class="check-task">',
             '<button class="check">',
               '<img src="./img/check.png" width="24px" alt="" id="check">',

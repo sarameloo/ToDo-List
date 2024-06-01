@@ -4,7 +4,7 @@ include 'conexao.php';
 session_start();
 
 $email = $_SESSION['email'];
-$stmt = $conn->prepare("select * from tarefa where id_usuario = ?");
+$stmt = $conn->prepare("select * from tarefa where id_usuario = ? and status = 'criada'");
 $stmt->execute([$email]);
 $result = $stmt->get_result();
 $tarefas = [];
