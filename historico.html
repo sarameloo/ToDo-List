@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/historico.css">
+    <link rel="stylesheet" href="styles/task.css">
+    <link rel="stylesheet" href="styles/anima_incio.css">
     <title>Histórico de Tarefas</title>
 </head>
 
@@ -17,17 +19,22 @@
             </div>
             <ul class="nav">
                 <li>
-                    <div>
-                        <input type="checkbox" class="checkbox" id="chk" />
-                        <label class="label" for="chk">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <a href=""><img src="./img/Profile.svg" id="profile-img" /></a>
+                    <button class="profile">
+                        <img src="./img/ProfileDark.svg" width="38px" id="profile-img" />
+                    </button>
+                    <ul class="profile-options">
+                        <li class="nome">viniciusfelix01@gmail.com</li>
+                        <li class="options">
+                            <button class="logout">
+                                <ion-icon name="log-out-outline"></ion-icon>
+                                Sair
+                            </button>
+                            <button class="excluir-conta">
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                                Excluir
+                            </button>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -45,6 +52,7 @@
 
 
 </body>
+<script src="js/logout.js"></script>
+<script src="js/excluir_conta.js"></script>
 <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-
 </html>

@@ -9,7 +9,8 @@
 }
 
 body {
-    background-color: var(--color-white-01);
+    background-color: var(--color-dark-body);
+    color: var(--color-gray-60);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -25,13 +26,91 @@ body {
     align-items: center;
 }
 
+.profile {
+    cursor: pointer;
+    margin-top: .3rem;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.profile-options {
+    background-color: var(--color-dark-body);
+    width: 20rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0;
+    border-radius: .5rem;
+    color: var(--color-gray-20);
+    box-shadow: 2px 3px 6px var(--color-gray-80);
+    height: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.profile-options.mostrar {
+    height: 9rem;
+    transition: 0.2s;
+}
+
+.nome {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 15rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .1rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.logout,
+.excluir-conta {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    width: 7rem;
+    height: 2rem;
+    color: var(--color-gray-20);
+    background-color: var(--color-purple);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.logout {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.excluir-conta {
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
 .header {
     padding: 4rem 0;
-    background-color: var(--color-white-40);
+    background-color: var(--color-dark-header);
     transition: background 0.2s linear;
     width: 100vw;
     margin-bottom: 8rem;
-    box-shadow: 0px 3px 6px var(--color-gray-80);
+    box-shadow: 0 3px 8px var(--color-gray-80);
 }
 
 .logo {
@@ -41,10 +120,8 @@ body {
 .nav {
     display: flex;
     align-items: center;
-}
-
-.nav li:first-child {
-    margin-right: 2rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .nav a {
