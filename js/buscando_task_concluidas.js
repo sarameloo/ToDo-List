@@ -1,5 +1,5 @@
 const list_concluidas = document.querySelector('.tasks_concluidas');
-//const contador_historico = document.querySelector('.contador');
+const contador_historico = document.querySelector('.contador');
 window.addEventListener('load', event=>{
     event.preventDefault();
     fetch('php/buscando_tasks_concluidas.php', {
@@ -40,6 +40,22 @@ window.addEventListener('load', event=>{
                 '</div>',
             ].join('');
         })
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+
+    fetch('php/contadores.php', {
+        method: 'POST'
+    })
+    .then(response=>{
+        if(!response.ok){
+            throw new Error('Falha na requisição');
+        }
+        return response.json();
+    })
+    .then(data=>{
+        contador_historico.textContent = data.concluidas;
     })
     .catch(error=>{
         console.log(error);

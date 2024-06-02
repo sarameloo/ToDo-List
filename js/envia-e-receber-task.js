@@ -37,11 +37,27 @@ myForm.addEventListener("submit", (event) => {
       let soma = contador + 1;
       cont_criadas.textContent = String(soma);
       let tarefa = data2;
+      var check_criar;
+      var delete_criar;
+      switch(tarefa.prioridade){
+        case 'baixa':
+          check_criar = 'img/check-baixo.svg';
+          delete_criar = 'img/delete-baixo.svg';
+          break;
+        case 'media':
+          check_criar = 'img/check-medio.svg';
+          delete_criar = 'img/delete-medio.svg';
+          break;
+        case 'alta':
+          check_criar = 'img/check-alto.svg';
+          delete_criar = 'img/delete-alto.svg';
+          break;
+      }
       task_list.innerHTML += [
         `<div class="task" id="${tarefa.id_tarefa}">`,
           '<div class="check-task">',
             '<button class="concluir">',
-              '<img src="./img/check.png" width="24px" alt="" id="check">',
+              `<img src="${check_criar}" width="20px" alt="" id="check">`,
             '</button>',
           '</div>',
           '<div class="infor">',
@@ -57,7 +73,7 @@ myForm.addEventListener("submit", (event) => {
           '</div>',
           '<div class="excluir-task">',
             '<button class="delete">',
-              '<img src="./img/delete.png" width="24px" alt="">',
+              `<img src="${delete_criar}" width="20px" alt="">`,
             '</button>',
           '</div>',
         '</div>',
@@ -87,12 +103,28 @@ window.addEventListener('load', event=>{
   })
   .then(data=>{
     let task = data;
+    var check;
+    var deletar;
     task.forEach(element => {
+      switch(element.prioridade){
+        case 'baixa':
+          check = 'img/check-baixo.svg';
+          deletar = 'img/delete-baixo.svg';
+          break;
+        case 'media':
+          check = 'img/check-medio.svg';
+          deletar = 'img/delete-medio.svg';
+          break;
+        case 'alta':
+          check = 'img/check-alto.svg';
+          deletar = 'img/delete-alto.svg';
+          break;
+      }
       task_list.innerHTML+= [
         `<div class = "task" id="${element.id_tarefa}">`,
           '<div class="check-task">',
             '<button class="concluir">',
-              '<img src="./img/check.png" width="24px" alt="" id="check">',
+              `<img src="${check}" width="20px" alt="" id="check">`,
             '</button>',
           '</div>',
           '<div class="infor">',
@@ -108,7 +140,7 @@ window.addEventListener('load', event=>{
           '</div>',
           '<div class="excluir-task">',
             '<button class="delete">',
-              '<img src="./img/delete.png" width="24px" alt="">',
+              `<img src="${deletar}" width="24px" alt="">`,
             '</button>',
           '</div>',
         '</div>',
