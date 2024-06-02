@@ -1,5 +1,6 @@
 const myForm = document.querySelector("#myForm");
 const task_list = document.querySelector('.task-list');
+const cont_criadas = document.querySelector('.cont_criadas');
 
 myForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -32,6 +33,9 @@ myForm.addEventListener("submit", (event) => {
       return response2.json();
     })
     .then(data2=>{
+      let contador = Number(cont_criadas.textContent);
+      let soma = contador + 1;
+      cont_criadas.textContent = String(soma);
       let tarefa = data2;
       task_list.innerHTML += [
         `<div class="task" id="${tarefa.id_tarefa}">`,

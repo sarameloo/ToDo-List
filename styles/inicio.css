@@ -324,3 +324,27 @@ select#complexity {
   background-color: var(--color-gray-60);
   color: var(--color-gray-20);
 }
+
+/* Personalizar a track (área de rolagem) */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-dark-header-border);
+  /* Cor de fundo da track */
+}
+
+/* Personalizar o thumb (indicador de rolagem) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-80);
+  /* Cor do thumb */
+  border-radius: 6px;
+  /* Arredondar as bordas do thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-black-80);
+  /* Cor do thumb ao passar o mouse */
+}
