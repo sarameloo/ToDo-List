@@ -1,7 +1,8 @@
-function deletar_task(){
+function deletar_concluir_task(){
     var tarefas = document.querySelectorAll('.task');
     tarefas.forEach(task=>{
         var btn_delete = task.querySelector('.delete');
+        var btn_concluir = task.querySelector('.concluir');
         btn_delete.addEventListener('click', (event)=>{
             event.preventDefault();
             fetch('php/excluir_task.php',{
@@ -23,13 +24,34 @@ function deletar_task(){
                 console.log(error);
             })
         })
+        btn_concluir.addEventListener('click', (event)=>{
+            event.preventDefault();
+            fetch('php/concluir_task.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `id=${task.id}`
+            })
+            .then(response=>{
+                if(!response.ok){
+                    throw new Error('Falha na requisição');
+                } else{
+                    task.remove();
+                }
+                return response.text();
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+        })
     })
 }
 
 const monitor = new MutationObserver(mutations=>{
     mutations.forEach(mutation=>{
         if(mutation.type === 'childList'){
-            deletar_task();
+            deletar_concluir_task();
         }
     })
 })
