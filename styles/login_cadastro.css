@@ -84,7 +84,7 @@ body {
   }
 
   .botao {
-    background-color: var(--color-purple);
+    background-color: var(--color-blue);
     color: var(--color-gray-20);
     box-shadow: 2px 3px 6px var(--color-gray-80);
   }
@@ -140,7 +140,7 @@ body {
 }
 
 .link {
-  color: var(--color-purple);
+  color: var(--color-blue);
   text-decoration: underline;
   transition: 0.12s;
 }

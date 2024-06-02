@@ -90,7 +90,7 @@ body {
     width: 7rem;
     height: 2rem;
     color: var(--color-gray-20);
-    background-color: var(--color-purple);
+    background-color: var(--color-blue);
     cursor: pointer;
     transition: .2s;
 }
@@ -161,7 +161,7 @@ body {
         }
     }
     a {
-        color: var(--color-purple);
+        color: var(--color-blue);
         font-weight: bold;
         transition: .3s;
     }

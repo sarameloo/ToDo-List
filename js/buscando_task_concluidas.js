@@ -12,24 +12,33 @@ window.addEventListener('load', event=>{
         return response.json()
     })
     .then(data=>{
-        let teste = data;
-        teste.forEach(task=>{
+        data.forEach(tasks_feitas=>{
+            switch(tasks_feitas.prioridade){
+                case 'baixa':
+                    var feita = 'img/checked-baixo.svg';
+                    break;
+                case 'media':
+                    var feita = 'img/checked-medio.svg';
+                    break;
+                case 'alta':
+                    var feita = 'img/checked-alto.svg';
+                    break;
+            }
             list_concluidas.innerHTML += [
-                `<div class = "task" id="${task.id_tarefa}">`,
+                `<div class = "task" id="${tasks_feitas.id_tarefa}">`,
                 '<div class="check-task">',
                     '<button class="concluida">',
-                    '<img src="img/checked.png" width="24px" alt="" id="check">',
+                    `<img src="${feita}" width="24px" alt="" id="check">`,
                     '</button>',
                 '</div>',
                 '<div class="infor">',
-                    `<p class="title-task dashed">${task.titulo}</p>`,
+                    `<p class="title-task dashed">${tasks_feitas.titulo}</p>`,
                     '<div class="description">',
-                    `<p class="description-task">${task.descricao}</p>`,
+                    `<p class="description-task">${tasks_feitas.descricao}</p>`,
                     '</div>',
                     '<div class="DPC">',
-                    `<span>${task.prazo}</span>`,
-                    `<span>${task.prioridade}</span>`,
-                    `<span>${task.complexidade}</span>`,
+                    `<span class="prazo"><img src="img/date.svg" width="16px" alt="">${tasks_feitas.prazo}</span>`,
+                    `<span class="comp"><img src="img/Complexity.svg" width="16px" alt="">${tasks_feitas.complexidade}</span>`,
                     '</div>',
                 '</div>',
                 '<div class="excluir-task">',
