@@ -1,4 +1,5 @@
 const cont_concluidas = document.querySelector('.cont_concluidas');
+const cont_criadas2 = document.querySelector('.cont_criadas');
 function deletar_concluir_task(){
     var tarefas = document.querySelectorAll('.task');
     tarefas.forEach(task=>{
@@ -38,6 +39,7 @@ function deletar_concluir_task(){
             })
             .then(data=>{
                 cont_concluidas.textContent = data.concluidas;
+                cont_criadas2.textContent = data.criadas;
             })
             .catch(error=>{
                 console.log(error);
