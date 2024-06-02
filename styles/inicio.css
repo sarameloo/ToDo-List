@@ -35,7 +35,10 @@ body {
   color: var(--color-gray-60);
   font-size: var(--font-size-16);
   background-color: var(--color-dark-body);
-  max-height: 100vh;
+}
+
+.body_incio{
+  height: 115vh;
 }
 
 .container {

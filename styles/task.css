@@ -2,7 +2,7 @@
     margin-top: .7rem;
     overflow: auto;
     scrollbar-width: none;
-    height: auto;
+    height: 24;
     max-height: 24rem;
     width: 45rem;
     display: flex;
