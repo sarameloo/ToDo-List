@@ -42,10 +42,15 @@
 
     <div class="historico">
         <div class="navegacao">
-            <p>Tarefas concluidas <span>0</span></p>
-            <a href="inicio.html">Adicionar tarefas <span>+</span></a>
+            <p>Tarefas concluidas <span class="contador">0</span></p>
+            <a class="trocar_inicio" href="inicio.html">Adicionar tarefas <span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" width="2" height="14" fill="#DC4C3E" />
+                    <rect x="14" y="6" width="2" height="14" transform="rotate(90 14 6)" fill="#DC4C3E" />
+                </svg>
+            </span></a>
         </div>
-        <div class="taks_concluidas">
+        <div class="tasks_concluidas">
 
         </div>
     </div>
@@ -54,5 +59,6 @@
 </body>
 <script src="js/logout.js"></script>
 <script src="js/excluir_conta.js"></script>
+<script src="js/buscando_task_concluidas.js"></script>
 <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 </html>

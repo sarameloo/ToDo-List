@@ -38,7 +38,6 @@
     background-color: transparent;
     cursor: pointer;
     outline: none;
-    border: var(--color-purple);
     transition: .3s;
 }
 
@@ -84,5 +83,17 @@
         cursor: pointer;
         transition: .3s;
     }
+}
+
+.dashed{
+    text-decoration: line-through;
+}
+
+.concluida {
+    cursor: default;
+    width: 32px;
+    border-radius: 50%;
+    background-color: transparent;
+    outline: none;
 }
 

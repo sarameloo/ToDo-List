@@ -55,6 +55,15 @@
     transition: .05s;
 }
 
+.trocar_inicio:hover {
+    transform: scale(1.04);
+}
+
+.trocar_inicio:focus {
+    color: var(--color-blue);
+    transition: .05s;
+}
+
 .concluir:hover{
     transform: scale(1.1);
 }
