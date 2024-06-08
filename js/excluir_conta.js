@@ -12,7 +12,7 @@ deletar_conta.addEventListener('click', (event)=>{ //adicionando evento de click
                 throw new Error('Falha na requisição'); //mensagem de erro
             }
             else{
-                window.location.href = "login.html"; //redirecionando para o página de login
+                window.location.href = "cadastro.html"; //redirecionando para o página de login
             }
         })
         .catch((erro)=>{ //tratando erros
