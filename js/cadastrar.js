@@ -5,7 +5,7 @@ meu_form.addEventListener('submit', event=>{ //adicionando ouvinte
     let form_data = new FormData(meu_form); //instanciando formdata
     //console.log(form_data)
     
-    fetch('php/cadastrar.php', {
+    fetch('php/cadastrar.php', { //função nativa do JS que é usada para fazer requisições HTTP
         method: 'POST',  //método POST
         body: form_data, //corpo do formdata
     })
